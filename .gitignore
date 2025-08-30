@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# But keep js_learning project
+!/js_learning/
+
+# Always keep .gitignore file itself
+!.gitignore
