@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid template area</title>
+    <style>
+          *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .container{
+        padding: 4rem;
+        background-color: rgb(141, 64, 136);
+        height: 100%;
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+        
+        /* grid-template-columns: repeat(3,1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(200px,500px));
+    }
+    .item{
+         border: .8rem solid black;
+        background-color: pink;
+        padding: .8rem;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <!-- <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">O</div>
+        <div class="item">P</div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>resume</title>
+        <meta name="description" content="this project is to help you for template for job Application">
+        <link rel="shortcut icon" href="maharanapratap.jpg" type="image/x-icon">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+    <h1>Welcome to project</h1>
+    <h2>Job Application</h2>
+    <form>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="Enter Name" >
+        <br>
+        <br>
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" placeholder="Enter Email" >
+        <br>
+        <br>
+        <label for="phone">Mobile number: </label>
+        <input type="tel" name="phone" id="phone">
+        <br>
+        <br>
+        <label for="resume">Resume:</label>
+        <input type="file" name="resume" id="resume" >
+        <br>
+        <br>
+        <label for="counter">Experience (years): </label>
+        <input type="number" name="counter" id="counter" min="0" max="50">    
+        
+        <fieldset>
+            <legend>Skills</legend>
+            
+            <label for="checkbox1">html</label>
+            <input type="checkbox" name="checkbox1" id="checkbox1">
+
+            <label for="checkbox2">css</label>
+            <input type="checkbox" name="checkbox2" id="checkbox2">
+
+            <label for="checkbox3">js</label>
+            <input type="checkbox" name="checkbox3" id="checkbox3">
+           
+        </fieldset>
+        <br> 
+        <label for="education">Higher Education: </label>
+        <select name="education" id="education">
+            <option value="p.hd">p.hd</option>
+            <option value="pg">pg</option>
+            <option value="ug">ug</option>
+            <option value="senior secondary">senior secondary</option>
+            <option value="high school">high school</option>
+        </select>
+        <br>
+        <fieldset>
+        <legend>available</legend>
+
+            <label for="radio1">Full time</label>
+            <input type="radio" name="radio1" id="radio1">
+            <br>
+            <label for="radio2">Part time</label>
+            <input type="radio" name="radio2" id="radio2">
+            <br>
+            <label for="radio3">work from home</label>
+            <input type="radio" name="radio3" id="radio3">
+            <br>
+        </fieldset>
+        </br>
+        <label for="textarea1">Comment</label>
+        <br>
+        <textarea name="textarea1" id="textarea1" cols="15" rows="4"></textarea>
+        <br>
+        <input type="submit" value="Submit Application">
+        
+    </form>
+
+
+</body>

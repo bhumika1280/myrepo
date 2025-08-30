@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: 3px solid black;
+            margin: 2px;
+            padding: 2px;
+            height: 500px;
+            display: flex;
+            
+        }
+        .box{
+            width: 140px;
+            height: 140px;
+            border: 4px solid brown;
+            margin: 2px;
+            padding: 2px;
+           
+        }
+        #box1{
+            background-color: red;
+            }
+
+        #box2{
+            background-color: blue;
+            }
+        #box3{
+            background-color: orange;
+            
+        }
+        #box4{
+            background-color: green;
+            }
+         #img22 {
+            height: 100px;
+            width: 100px;
+            background-image: url(maharanapratap.jpg);
+            background-size: contain;
+            background-position: center;
+            /* background-repeat: no-repeat; */
+
+        }
+        
+    @media(min-width:640px){
+            .container{
+                flex-direction: row;
+            }
+        }
+    @media(max-width:640px){
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="img22"></div>
+    <div class="box" id="box1">BOX1</div>
+    <div class="box" id="box2">BOX2</div>
+    <div class="box" id="box3">BOX3</div>
+    <div class="box" id="box4">BOX4</d3v>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(137, 91, 180);
+        gap: .4rem;
+        padding: 4rem;
+        display: grid;
+        /* grid-template-columns: repeat(1,300px);
+        grid-template-rows: (4,200px); */
+       border: 2px solid white;
+
+       grid-template-areas: 
+        "header header header"
+        "sidebar content1 content1"
+        "sidebar content2 content3"
+        "footer footer footer"
+       ;
+    }
+    .items{
+        /* height: 100px;
+        width: 100px; */
+        background-color: rgb(234, 241, 253);
+        border: 1px solid rgb(255, 255, 255);
+        padding: 4rem;
+        color: rgb(17, 15, 15);
+        /* justify-self: center; */
+        /* align-self: end; */
+        /* place-self: center; */
+    }
+    #header{
+        grid-area: header;
+    }
+    #sidebar{
+        grid-area: sidebar;
+    }
+    #content1{
+        grid-area: content1;
+    }
+    #content2{
+        grid-area: content2;
+    }
+    #content3{
+        grid-area: content3;
+    }
+    #footer{
+        grid-area: footer;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items " id="header">header</div>
+        <div class="items " id="sidebar">sidebar</div>
+        <div class="items " id="content1">content1</div>
+        <div class="items" id="content2">content2</div>
+        <div class="items" id="content3">content3</div>
+        <div class="items " id="footer">footer</div>
+    </div>
+</body>
+</html>

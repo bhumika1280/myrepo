@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Drag and Drop</title>
+  <link rel="stylesheet" href="1_project_css.css">
+  <style>
+    #dragMe {
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+  }
+
+  #dropZone {
+    width: 300px;
+    height: 150px;
+    border: 2px dashed gray;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+  }
+  h1{
+    color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+  
+  }
+  p{
+    color: beige;
+    
+  }
+  #dropZone.hover {
+    border-color: green;
+    color: green;
+  }
+  </style>
+</head>
+<body>
+<h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, saepe.</h1>
+
+<p > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae illum quis aut possimus odit facilis totam error vero distinctio iste.</p>
+<div id="dragMe" draggable="true">Drag me!</div>
+<div id="dropZone">Drop here</div>
+
+<script>
+  const dragMe = document.getElementById('dragMe');
+  const dropZone = document.getElementById('dropZone');
+
+  // Drag start: store data
+  dragMe.addEventListener('dragstart', function(e) {
+    e.dataTransfer.setData("text/plain", e.target.id);
+  });
+
+  // While dragging over the drop zone
+  dropZone.addEventListener('dragover', function(e) {
+    e.preventDefault();  // Allows drop
+    dropZone.classList.add('hover');
+  });
+
+  dropZone.addEventListener('dragleave', function() {
+    dropZone.classList.remove('hover');
+  });
+
+  // On drop
+  dropZone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    const data = e.dataTransfer.getData("text/plain");
+    const draggedElement = document.getElementById(data);
+    dropZone.appendChild(draggedElement);
+    dropZone.classList.remove('hover');
+    dropZone.textContent = "Item dropped!";
+  });
+</script>
+
+</body>
+</html>

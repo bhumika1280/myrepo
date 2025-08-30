@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: bisque;
+            width: 100vw;
+            height: 100vh;
+            border: 2px solid black;
+        }
+        .box{
+            height: 80px;
+            width: 360px;
+            background-color: rgb(228, 71, 71);
+            border: 2px solid black;
+            margin: 10px;
+            border-radius: 10px;
+            position: relative;
+            animation-name: movement;
+            animation-direction: alternate;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+            
+        }
+        @keyframes movement{
+            from{
+                top: 0px;
+                left: 0px;
+            }
+            to{
+                top: 0px;
+                left: 1000px;
+            }
+        }
+        #box1{
+            height: 80px;
+            width: 360px;
+            background-color: rgb(228, 71, 71);
+            border: 2px solid black;
+            margin: 15px;
+            border-radius: 10px;
+            position: relative;
+            animation: rightmovement 5s linear 2s infinite alternate both;
+        }
+        @keyframes rightmovement{
+            from{
+                top: 440px;
+                left: 1000px;
+            }
+            to{
+                top: 440px;
+                left: 0px;
+            }
+        }
+        #circle{
+            height: 80px;
+            width: 80px;
+            background-color: rgb(228, 71, 71);
+            border: 2px solid black;
+            margin: 10px;
+            border-radius: 50px;
+            position: relative;
+           top: 30%;
+           left: 40%;
+           animation: 10s ease-in-out 0s infinite alternate-reverse none running circlemovement;
+        }
+        @keyframes circlemovement{
+           0%{
+            top: 1%;
+            left: 5%;
+           }
+           30%{
+            top: 5%;
+            left: 90%;
+           }
+           60%{
+            top: 70%;
+            left: 95%;
+
+           }
+           100%{
+            top: 75%;
+            left: 90%;
+           }
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+        <div id="box1"> box lower</div>
+        <div id="circle"></div>
+    </div>
+</body>
+</html>
